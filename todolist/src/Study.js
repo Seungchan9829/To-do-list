@@ -3,6 +3,6 @@ import List from './list'
 
 export default function Study(){
     return(
-        <List/>
+        <List type = 'study'/>
     )
 }

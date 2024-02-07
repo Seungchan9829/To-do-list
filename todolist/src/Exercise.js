@@ -4,6 +4,6 @@ import "./Exercise.css";
 import List from "./list";
 export default function Exercise(){
     return(
-        <List/>
+        <List type = 'exercise'/>
     )
 }
