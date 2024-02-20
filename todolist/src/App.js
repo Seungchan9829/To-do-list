@@ -6,16 +6,17 @@ import Navbar from './Navbar';
 import Main from './main';
 import Study from './Study';
 import Exercise from './Exercise';
+import Login from './Login';
 
 
 export default function App(){
   return(
     <div>
-     <Navbar/>
      <Routes>
       <Route path="/" element={<Main/>}></Route>
       <Route path="/exercise" element={<Exercise/>}></Route>
       <Route path ="/study" element={<Study/>}></Route>
+      <Route path = "/login" element = {<Login/>}></Route>
      </Routes>
     </div>
     
