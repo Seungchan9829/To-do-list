@@ -3,6 +3,7 @@ const app = express()
 const port = 4000
 const cors = require('cors');
 const pg = require('pg');
+const bcrypt = require('bcrypt');
 
 app.use(cors())
 app.use(express.json());
@@ -95,6 +96,30 @@ app.delete('/task/:type/:todo_id', async (req,res) => {
     console.error(error);
   }
 })
+
+app.post('/signup', async(req,res) => {
+  try{
+    const {name, email, password} = req.body;
+    // 비밀번호 bcrypt를 이용하여 암호화.
+    bcrypt.hash(password, 10, function(err, hash) {
+      // Store hash in your password DB.
+      client.query('INSERT INTO "to-do-list"."users" (name, email, password) VALUES ($1, $2, $3)',
+      [name, email, hash]);
+  });
+  }
+  catch(err){
+    console.error(err);
+  }
+
+  res.send("회원 가입 완료");
+})
+
+
+
+
+
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
