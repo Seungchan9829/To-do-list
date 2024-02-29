@@ -12,7 +12,7 @@ export default function Navbar(){
                     <Link to="/exercise">운동</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="study">공부</Link>
+                    <Link to="/study">공부</Link>
                 </li>
             </ul>
         </nav>

@@ -15,7 +15,7 @@
     border-radius: 5px; /* 더 둥근 모양으로 변경 */
   }
   
-  button {
+  .todo-container button {
     padding: 10px; /* 더 큰 패딩 */
     cursor: pointer;
     background-color: #3498db; /* 변경된 색상 */
@@ -44,7 +44,8 @@
     margin: 0;
   }
   
-  button {
+  .todo-container button {
+    width: auto;
     background-color: #e74c3c; /* 변경된 색상 */
     color: #fff;
     border: none;
