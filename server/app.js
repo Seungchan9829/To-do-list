@@ -138,6 +138,11 @@ app.post('/login', async(req,res) => {
   }
 })
 
+app.post('/logout', async(req,res) => {
+  res.status(200).json("로그아웃이 완료되었습니다.")
+})
+
+
 // 토큰을 검증하는 api
 app.get('/authenticate', (req, res) => {
   const authHeader = req.headers.authorization;

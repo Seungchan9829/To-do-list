@@ -25,7 +25,7 @@ export default function App(){
 
         }
         catch(error){
-          if(error.response && error.response.status === 401){
+          if(error.response && (error.response.status === 401 || error.response.status === 403)){
             navigate('/login');
           }
         }
